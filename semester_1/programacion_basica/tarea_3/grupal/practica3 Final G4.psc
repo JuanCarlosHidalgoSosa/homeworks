@@ -145,8 +145,8 @@ Algoritmo practica3
             Escribir "----------Ejercicio 6----------"
 			Escribir "Ingrese un nombre: "
 			Leer nombreE6
-			Para iE6<-0 Hasta Longitud(nombreE6) Con Paso 1 Hacer
-				Escribir Subcadena(nombreE6,0,iE6)
+			Para iE6<-1 Hasta Longitud(nombreE6) Con Paso 1 Hacer
+				Escribir Subcadena(nombreE6,1,iE6)
 			FinPara
 			
         7: 
