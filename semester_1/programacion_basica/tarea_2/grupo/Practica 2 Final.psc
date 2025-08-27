@@ -125,16 +125,19 @@ Algoritmo practica2
         7:
             Definir n7 Como Entero
             Escribir "----------Ejercicio 7----------"
-            Escribir 'Ingrese n'
-            Leer n7
-            Mientras n7<>1 Hacer
-                Si n7 MOD 2=0 Entonces
-                    n7 <- n7/2
-                SiNo
-                    n7 <- n7*3+1
-                FinSi
-                Escribir 'n: ', n7
-            FinMientras
+			Repetir
+				Escribir 'Ingrese n'
+				Leer n7
+			Hasta Que n7 > 0
+            
+			Mientras n7<>1 Hacer
+				Si n7 MOD 2=0 Entonces
+					n7 <- n7/2
+				SiNo
+					n7 <- n7*3+1
+				FinSi
+				Escribir 'n: ', n7
+			FinMientras
         8:
             Definir a8, b8, suma8, i8 Como Entero
             Escribir "----------Ejercicio 8----------"
