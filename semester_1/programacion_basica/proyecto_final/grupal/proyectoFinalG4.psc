@@ -97,8 +97,8 @@ Algoritmo proyectoFinalG4
                 Escribir "====================================================="
                 Escribir "       ¡Bienvenido al juego de adivinar números!     "
                 Escribir "====================================================="
-                Escribir "Tienes 10 intentos para adivinar el número secreto."
-                Escribir "El número está entre 1 y 100."
+                Escribir "=======Tienes 10 intentos para adivinar el número secreto======="
+                Escribir "=======El número está entre 1 y 100.======="
                 
                 Repetir
                     Escribir "Intento #", intentos_adiv + 1, " de 10"
@@ -120,9 +120,13 @@ Algoritmo proyectoFinalG4
                 Hasta Que ingresado_adiv = n_adiv O intentos_adiv = 10
                 
                 Si ingresado_adiv = n_adiv Entonces
+					Escribir "==========================================================="
                     Escribir "¡Correcto! Adivinaste en ", intentos_adiv, " intento(s)."
+					Escribir "==========================================================="
                 Sino
+					Escribir "==========================================================="
                     Escribir "¡Se acabaron tus intentos! El número secreto era: ", n_adiv
+					Escribir "==========================================================="
                 FinSi
             3:
                 Definir opcion_sup, codigo_sup, cantidad_sup, i_sup Como Entero
@@ -130,7 +134,8 @@ Algoritmo proyectoFinalG4
                 Definir pagarTarjeta_sup, seguir_sup Como Caracter
                 Definir numFactura_sup Como Entero
                 Definir fecha_sup Como Cadena
-                
+                Definir nombreCliente_sup Como Cadena
+				
                 Dimension productos_sup[30]
                 Dimension precios_sup[30]
                 Dimension cantidades_sup[30]
@@ -230,7 +235,7 @@ Algoritmo proyectoFinalG4
                                     cantidades_sup[codigo_sup] <- cantidades_sup[codigo_sup] + cantidad_sup
                                     subtotal_sup <- subtotal_sup + (precios_sup[codigo_sup] * cantidad_sup)
                                 SiNo
-                                    Escribir "? Codigo invalido."
+                                    Escribir "Codigo invalido."
                                 FinSi
                                 
                                 Escribir "¿Desea seguir comprando? (S/N): "
@@ -241,12 +246,16 @@ Algoritmo proyectoFinalG4
                             numFactura_sup <- numFactura_sup + 1
                             Escribir "Ingrese la fecha de emision (DD/MM/AAAA): "
                             Leer fecha_sup
-                            
+							Escribir "Ingrese el nombre del cliente: "
+							Leer nombreCliente_sup
+							
+							
 							Escribir "======================================"
 							Escribir "         SUPERMERCADO BETTU"
 							Escribir "======================================"
 							Escribir "Factura N°: ", numFactura_sup
 							Escribir "Fecha: ", fecha_sup
+							Escribir "Cliente: ", nombreCliente_sup
 							Escribir "--------------------------------------"
 							Escribir "Producto"
 							Escribir "--------"
@@ -289,6 +298,7 @@ Algoritmo proyectoFinalG4
             4:
                 Escribir "Gracias por usar el sistema. ¡Hasta luego!"
         FinSegun
+		
 FinAlgoritmo
 SubProceso MostrarDado(valor)
     Segun valor Hacer
